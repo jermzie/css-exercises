@@ -8,34 +8,37 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
 .para {
   font-size: 22px;
 }
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
+/* if placed after ".para" selector, we take advantage of the rule order since both selectors have same specificity*/
+.small-para {
+  font-size: 14px;
+}
 
+/* general button selector properties */
 .button {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   font-size: 20px;
 }
 
-.child {
+/* used unique button id selector */
+/* alt. soln to use is ".button.confirm" class selector */
+#confirm-button {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+.text .child {
   color: rgb(0, 0, 0);
   font-weight: 800;
   font-size: 14px;
 }
 
-div.text {
+.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
